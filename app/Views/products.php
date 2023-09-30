@@ -83,20 +83,20 @@
                             value="<?= isset($pro['ProductName']) ? $pro['ProductName'] : '' ?>">
                     </div>
 
+
                     <div class="form-group">
-                    <label for="ProductDescription">Description:</label>
-                    <select class="form-control" name="ProductDescription">
-                        <option value="Male" <?= (isset($pro['ProductDescription']) && $pro['ProductDescription'] === 'Condiments') ? 'selected' : '' ?>>Condiments</option>
-                        <option value="Female" <?= (isset($pro['ProductDescription']) && $pro['ProductDescription'] === 'Drinks') ? 'selected' : '' ?>>Drinks</option>
-                        <option value="Other" <?= (isset($pro['ProductDescription']) && $pro['ProductDescription'] === 'Other') ? 'selected' : '' ?>>Other</option>
-                    </select>
+                        <label for="ProductDescription">Description:</label>
+                        <input type="text" class="form-control" name="ProductDescription" placeholder="Enter Description"
+                            value="<?= isset($pro['ProductDescription']) ? $pro['ProductDescription'] : '' ?>">
                     </div>
 
-
                     <div class="form-group">
-                        <label for="ProductCategory">Category:</label>
-                        <input type="text" class="form-control" name="ProductCategory" placeholder="Enter Category"
-                            value="<?= isset($pro['ProductCategory']) ? $pro['ProductCategory'] : '' ?>">
+                    <label for="ProductCategory">Category:</label>
+                    <select class="form-control" name="ProductCategory">
+                        <option value="Condiments" <?= (isset($pro['ProductCategory']) && $pro['ProductCategory'] === 'Condiments') ? 'selected' : '' ?>>Condiments</option>
+                        <option value="Drinks" <?= (isset($pro['ProductCategory']) && $pro['ProductCategory'] === 'Drinks') ? 'selected' : '' ?>>Drinks</option>
+                        <option value="Other" <?= (isset($pro['ProductCategory']) && $pro['ProductCategory'] === 'Other') ? 'selected' : '' ?>>Other</option>
+                    </select>
                     </div>
 
                     <div class="form-group">
